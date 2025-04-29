@@ -1,0 +1,15 @@
+---
+- name: Tuesday challenge
+  hosts: planetexpress
+  connection: ssh
+  become: true
+
+  tasks:
+    - name: Create the day2 directory
+      file:
+        path: day2
+        state: directory
+
+    - name: Write "Happy Tuesday!" into a file
+      shell: echo "Happ:y Tuesday!" > day2/message.txt
+
