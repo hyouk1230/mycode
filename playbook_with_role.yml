@@ -1,0 +1,8 @@
+---
+- name: call role file
+  hosts: localhost  # This playbook runs on all inventory hosts
+  connection: local  # Use network CLI to connect to switches
+  gather_facts: no  # Enable fact gathering for device-specific variables
+
+  roles:
+    - challenge_challenge  # Call the arista_backup role we created
