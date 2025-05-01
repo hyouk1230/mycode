@@ -1,0 +1,8 @@
+---
+- name: executing a role
+  hosts: zoidberg
+  gather_facts: yes
+  become: true
+
+  roles:
+    - challenge
